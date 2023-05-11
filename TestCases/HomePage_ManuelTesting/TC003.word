@@ -1,0 +1,11 @@
+Test Case ID: TC003
+Test Case Name : Functionality of "Deine Ziele" dropdown on the homepage
+Test Description: Verify that the dropdown on the homepage open successfully
+Preconditions: The user should be on the homepage of the NovoDaily website.
+Test Steps:
+1. navigate to novoDaily website
+2. wait for the homepage to load for 3 seconds
+3. hover over a Deine Ziele dropwdown and then hover over each tab within the product dropdown until the "Abnehmen" tab is visible
+4. click on the "Abnehmen" tab to open it in a separate tab
+5. verify that the "Abnehmen" titel is displayed on the new tab.
+6. close the browser

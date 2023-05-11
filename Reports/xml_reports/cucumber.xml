@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="31.702" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="NovoDaily Logo Functionality" name="Verify that a user can click on the NOVODAILY logo and refresh the homepage." time="31.451">
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+Then wait for for the homepage to load for 3 seconds........................passed
+When The User click on the NovoDaily font logo..............................passed
+And verify that the logo of NovoDaily is displayed on the homepage..........passed
+Then close the browser......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

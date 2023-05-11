@@ -1,0 +1,11 @@
+Test Case ID: TC001
+Test Case Name : NovoDaily Logo Functionality
+Test Description: Verify that a user can click on the NOVODAILY logo and return to the homepage.
+Preconditions: User should be on Homepage of NovoDaily's website.
+Test Steps:
+1. navigate to the NovoDaily website.
+2. wait for the homepage to load for 5 seconds.
+3. click on the "NOVODAILY" font logo.
+4. verify that that the logo of NovoDaily is displayed on the homepage.
+5. close the browser
+

@@ -1,0 +1,14 @@
+Test Case ID: TC004
+Test Case Name : functionality of "Stress reduzieren" navigation link
+Test Description: Verify that a user can click on "Stress reduzieren" navigation link and can see sub-options
+Preconditions: User should be on Homepage of NovoDaily's website,  hover over  the "Deine Ziele" dropdown to open
+        and  then click on the "stress reduzieren" option to open.
+Test Steps:
+1. navigate to the NovoDaily website.
+2. wait for the homepage to load for 5 seconds.
+3. hover over the Deine Ziele dropwdown
+4. click on the "Stress reduzieren" tab to open it in a separate tab
+5. scroll down til "Abnehmen" navigate-link is visible
+6. click on the "Stress reduzieren" navigate-link
+7. verify that the "Outdoor-Yoga" font is displayed
+8. close the browser

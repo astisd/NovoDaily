@@ -1,0 +1,30 @@
+Test Case ID: TC002
+Test Case Name : Functionality of "Produkte" dropdown on the homepage
+Test Description: Verify that Produkte dropdown on the homepage open successfully
+Preconditions: The user should be on the homepage of the NovoDaily website.
+Test Steps:
+1. navigate to novoDaily website
+2. wait for the homepage to load for 5 seconds
+3. hover over a Produkte dropwdown and then hover over each tab within the product dropdown until the "Bundles" tab is visible
+4. click on the "Bundles" tab to open it in a separate tab
+5. verify that the "Bundles" titel is displayed on the new tab.
+6. close the browser
+
+cucumber versionu:
+
+Feature: Produkte dropdown functionality on the homepage
+
+Scenario: Verify that Produkte dropdown on the homepage opens successfully
+  Given The user is on the homepage of the NovoDaily website
+  When The user hovers over the Produkte dropdown
+  And The user hovers over each tab within the product dropdown until the "Bundles" tab is visible
+  And The user clicks on the "Bundles" tab to open it in a separate tab
+  Then The "Bundles" title should be displayed on the new tab
+  And The browser should be closed
+
+
+
+
+
+
+

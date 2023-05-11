@@ -1,0 +1,12 @@
+Test Case ID: TC005
+Test Case Name : Functionality of "search" box on the homepage
+Test Description: Verify that if a user writes "nutrition" in the search section,
+    then can see a production and it's price .
+Preconditions: The user should be on the homepage of the NovoDaily website.
+Test Steps:
+1. navigate to novoDaily website
+2. wait for the homepage to load for 5 seconds
+3. click on search box and type "nutrition"
+4. verify that the price, number, logo of product are displayed
+5. verify that product name contains any of the words written in the search box.
+6. close the browser.

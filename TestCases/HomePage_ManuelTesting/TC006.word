@@ -1,0 +1,14 @@
+Test Case ID: TC006
+Test Case Name : functionality products name link
+Test Description: Verify that if a user types "nutrition" in the search section,
+    then the user can click on any product related to the nutrition category that appears in the search result.
+Preconditions: The user should be on the homepage of the NovoDaily website and can type anything in the search box
+Test Steps:
+1. navigate to novoDaily website
+2. wait for the homepage to load for 5 seconds
+3. click on search box and type "nutrition"
+4. click on "NovoDaily nutrition" link to open.
+5. verify that product available and delivery time text contains this string "sofort verfügbar, Lieferzeit 2-5 Tage"
+6. verify that the string "NovoDaily Nutrition" is equal with the name of product
+7. verify that the picture of nutrition product is displayed
+8. close the browser.

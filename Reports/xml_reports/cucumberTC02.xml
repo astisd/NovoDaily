@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="40.194" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="functionality of &quot;Stress reduzieren&quot; navigation link" name="Verify that a user can click on &quot;Stress reduzieren&quot; navigation link and can see sub-options" time="39.907">
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+Then wait for the homepage to load for 5 seconds............................passed
+When hovers over the Deine Ziele menu.......................................passed
+And click on the "Stress reduzieren" tab to open it in a separate tab.......passed
+Then scroll down til "Abnehmen" navigate-link is visible....................passed
+And click on the "Stress reduzieren" navigate-link..........................passed
+And verify that the "Outdoor-Yoga" font is displayed........................passed
+Then close the browser......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
