@@ -216,9 +216,35 @@ public class NovoDaily {
     public void verifyThatTheFontIsDisplayed(String arg0) {
         Assert.assertTrue(homePage.OutdoorYogaText.isDisplayed());
     }
+    @And("verify that the {string}, {string}, logo of product are displayed")
+    public void verifyThatTheLogoOfProductAreDisplayed(String price, String number) {
+        String expectedPrice = price;
+        String actualPrice = searchboxResults.priceOfProduct.getText();
 
-    @When("click on search box and type {string}")
-    public void clickOnSearchBoxAndType(String ProductName) {
+        Assert.assertTrue(actualPrice.contains(expectedPrice));
+
+        String expectedNumber = number;
+        String actualNumber =  searchboxResults.numberOfProduct.getText();
+
+        Assert.assertTrue(actualNumber.contains(expectedNumber));
+
+
+
+    }
+
+
+    @And("verify that {string} contains any of the words written in the search box")
+    public void verifyThatContainsAnyOfTheWordsWrittenInTheSearchBox(String name) {
+        String expectedName = name;
+        String actualName = searchboxResults.nameOfProduct.getText();
+
+       Assert.assertTrue(actualName.contains(expectedName));
+
+    }
+
+    @When("click on search box and type any {string}")
+    public void clickOnSearchBoxAndTypeAny(String ProductName) {
+        homePage.searchBox.sendKeys(ProductName);
 
     }
 }

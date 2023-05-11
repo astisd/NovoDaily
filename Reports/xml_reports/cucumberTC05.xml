@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="492.781" tests="13" skipped="0" failures="11" errors="0">
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.1" time="41.478">
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDailies".........................passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "99,00", "1", logo of product are displayed.............passed
+And verify that "NovoDailies" contains any of the words written in the search box.passed
+Then close the browser......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.2" time="38.262">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatTheLogoOfProductAreDisplayed(NovoDaily.java:224)
+	at ✽.verify that the "89,00", "1", logo of product are displayed(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily B12".......................passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "89,00", "1", logo of product are displayed.............failed
+And verify that "NovoDaily B12" contains any of the words written in the search box.skipped
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.3" time="36.731">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatTheLogoOfProductAreDisplayed(NovoDaily.java:224)
+	at ✽.verify that the "89,00", "1", logo of product are displayed(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Bundle - B"................passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "89,00", "1", logo of product are displayed.............failed
+And verify that "NovoDaily Bundle - B" contains any of the words written in the search box.skipped
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.4" time="37.037">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatTheLogoOfProductAreDisplayed(NovoDaily.java:224)
+	at ✽.verify that the "775,00", "1", logo of product are displayed(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Bundle - BD"...............passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "775,00", "1", logo of product are displayed............failed
+And verify that "NovoDaily Bundle - BD" contains any of the words written in the search box.skipped
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.5" time="37.95">
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Bundle - D"................passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "524,00", "1", logo of product are displayed............passed
+And verify that "NovoDaily Bundle - D" contains any of the words written in the search box.passed
+Then close the browser......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.6" time="37.375">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatContainsAnyOfTheWordsWrittenInTheSearchBox(NovoDaily.java:241)
+	at ✽.verify that "NovoDaily D3" contains any of the words written in the search box(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:14)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily D3"........................passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "89,00", "1", logo of product are displayed.............passed
+And verify that "NovoDaily D3" contains any of the words written in the search box.failed
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.7" time="37.05">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatTheLogoOfProductAreDisplayed(NovoDaily.java:224)
+	at ✽.verify that the "89,00", "1", logo of product are displayed(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Lipids"....................passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "89,00", "1", logo of product are displayed.............failed
+And verify that "NovoDaily Lipids" contains any of the words written in the search box.skipped
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.8" time="36.316">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatTheLogoOfProductAreDisplayed(NovoDaily.java:224)
+	at ✽.verify that the "89,00", "1", logo of product are displayed(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Magnesium".................passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "89,00", "1", logo of product are displayed.............failed
+And verify that "NovoDaily Magnesium" contains any of the words written in the search box.skipped
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.9" time="39.502">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatTheLogoOfProductAreDisplayed(NovoDaily.java:224)
+	at ✽.verify that the "320,00", "1", logo of product are displayed(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Nutrition".................passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "320,00", "1", logo of product are displayed............failed
+And verify that "NovoDaily Nutrition" contains any of the words written in the search box.skipped
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.10" time="37.758">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatTheLogoOfProductAreDisplayed(NovoDaily.java:224)
+	at ✽.verify that the "289,00", "1", logo of product are displayed(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Shape".....................passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "289,00", "1", logo of product are displayed............failed
+And verify that "NovoDaily Shape" contains any of the words written in the search box.skipped
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.11" time="38.134">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatContainsAnyOfTheWordsWrittenInTheSearchBox(NovoDaily.java:241)
+	at ✽.verify that "NovoDaily Subscription - BS" contains any of the words written in the search box(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:14)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Subscription - BS".........passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "99,00", "1", logo of product are displayed.............passed
+And verify that "NovoDaily Subscription - BS" contains any of the words written in the search box.failed
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.12" time="36.432">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatTheLogoOfProductAreDisplayed(NovoDaily.java:224)
+	at ✽.verify that the "149,00", "1", logo of product are displayed(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Subscription - DBS"........passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "149,00", "1", logo of product are displayed............failed
+And verify that "NovoDaily Subscription - DBS" contains any of the words written in the search box.skipped
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Functionality of &quot;search&quot; box on the homepage" name="Verify that if a user writes any product name in the search section, - Example #1.13" time="38.014">
+<failure type="java.lang.AssertionError">
+<![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinitions.NovoDaily.verifyThatTheLogoOfProductAreDisplayed(NovoDaily.java:224)
+	at ✽.verify that the "99,00", "1", logo of product are displayed(file:///Users/Febe/Desktop/Team113_JUnit/NovoDaily-Cucumber/src/test/resources/features/TC005.feature:13)
+]]>
+</failure>
+<system-out><![CDATA[
+Given The user navigate to novoDaily website................................passed
+And accept the cookie.......................................................passed
+When click on search box and type any "NovoDaily Subscription - DS".........passed
+Then wait for the homepage to load for 5 seconds............................passed
+And verify that the "99,00", "1", logo of product are displayed.............failed
+And verify that "NovoDaily Subscription - DS" contains any of the words written in the search box.skipped
+Then close the browser......................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>

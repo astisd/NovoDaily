@@ -58,7 +58,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/*ParalelRunner*.java</include>
+                        <include>**/runners/*Runner*.java</include>
                         <!--ParalelRunner diye isimlendirdigimiz classlarin ismini yazdik  -->
                     </includes>
                 </configuration>
@@ -70,7 +70,7 @@
                 <configuration>
                     <parallel>classes</parallel>
                     <forkMode>perthread</forkMode>
-                    <threadCount>2</threadCount> <!--suan da 2 tane paralel runner var ne kdar ise degistirmeliyiz -->
+                    <threadCount>1</threadCount> <!--suan da 2 tane paralel runner var ne kdar ise degistirmeliyiz -->
                     <reuseForks>false</reuseForks>
                     <argLine>-Duser.language=en</argLine>
                     <argLine>-Xmx1024m</argLine>
@@ -78,7 +78,7 @@
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                     <useFile>false</useFile>
                     <includes>
-                        <include>**/runners/*ParalelRunner*.java</include>
+                        <include>**/runners/*Runner*.java</include>
                         <!--suan da 2 tane paralel runner var ne kdar ise degistirmeliyiz -->
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
