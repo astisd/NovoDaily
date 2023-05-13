@@ -1,4 +1,4 @@
-#@wip
+@wip
 
   Feature: functionality of "Stress reduzieren" navigation link
     Background: it is the same first test-step for all scenarios.

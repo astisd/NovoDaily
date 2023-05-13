@@ -1,0 +1,119 @@
+Test Case ID : TC001
+Test Case Name : Functionality of top menu
+Test Description: Verify that Produkte, Deine Ziele, Wissenswertes, Ratgeber, über uns  categories  are active
+Preconditions: User should be on homepage of NovoDaily's website and Top menu should be displayed
+Test Steps:
+1. navigate to the NovoDaily website.
+2. wait for the homepage to load for 5 seconds
+3. hovers over a "Produkte" categorie titel
+4. wait for 2 seconds
+5. verify that the navigation flyout is displayed
+6. hovers over a "Deine Ziele" categorie titel
+7. wait for 2 seconds
+8. verify that the navigation flyout is displayed
+9. hovers over a "Wissenswertes" categorie titel
+10. wait for 2 seconds
+11.verify that the navigation flyout is displayed
+12. hovers over a "Ratgeber" categorie titel
+13. wait for 2 seconds
+14. verify that the navigation flyout is displayed.
+15. close the browser.
+
+Test Case ID: TC002
+Test Case Name : Functionality of top menu
+Test Description: Produkte, Deine Ziele, Wissenswertes, Ratgeber categories titel should redirect to relavant pages.
+Preconditions:
+User should be on homepage of NovoDaily's website
+Top menu should be displayed
+
+Test steps:
+1. navigate to the NovoDaily website.
+2. wait for the homepage to load for 5 seconds
+3. click on "Produkte" category title
+4. wait for the page to load for 3 seconds
+5. verify that the "Alle Produkte" font is displayed
+6. return to the home page
+7. wait for the home page to load for 3 seconds
+8. click on "Deine Ziele" categorie titel
+9. wait for the page to load for 3 seconds
+10.verify that the "Deine Ziele" font is displayed
+11. return to the home page
+12. wait for the home page to load for 3 seconds
+13. click on "Wissenswertes" categorie titel
+14. wait for the page to load for 3 seconds
+15. verify that the "Wissenswert" font is displayed
+16. return to the home page
+17. wait for the home page to load for 3 seconds
+18. click on "Ratgeber" categorie titel
+19. wait for the page to load for 3 seconds
+20. verify that the "Dein Novodaily Ratgeber" font is displayed
+21. return to the home page
+22. wait for the home page to load for 3 seconds
+
+Test Case ID: TC003
+Test Case Name : NovoDaily Logo Functionality
+Test Description: Verify that a user can click on the NOVODAILY logo and return to the homepage.
+Preconditions: User should be on Homepage of NovoDaily's website.
+Test Steps:
+1. navigate to the NovoDaily website.
+2. wait for the homepage to load for 5 seconds.
+3. click on the "NOVODAILY" font logo.
+4. verify that that the logo of NovoDaily is displayed on the homepage.
+5. close the browser
+
+
+Test Case ID: TC004
+Test Case Name : Functionality of search box
+Test Description: it should be possible to search for products from the search box
+Preconditions:
+- User should be on Homepage of NovoDaily's website.
+- Search box should be displayed
+Test Steps:
+1. navigate to the NovoDaily website.
+2. wait for the homepage to load for 5 seconds.
+3. click on the on the search box and write "Lipid" on the search box
+4. Verify that the search results page is displayed.
+5. verify that the opened product name contains the keyword "Lipids"
+6. click on the logo of "Novogenia" logo to refresh the homepage.
+7. repeat steps 3 to 6 for each of the following pruct names:
+    . "B12"
+    . "Dailes"
+    . "D3"
+    . "Magnesium"
+    . "Nutrition"
+    . "Shape"
+6. close the browser
+
+/* Bu senaryoda, farklı ürün isimlerinin her biri için ayrı bir test senaryosu yazmak yerine,
+    adımların tekrarlanması ile birden fazla ürün arama işlemi gerçekleştirilir. Bu şekilde, test senaryosunun uzunluğu daha kısa tutulabilir.
+
+
+Test Case ID: TC004
+Test Case Name : Functionality of search box
+Test Description: it should be possible to search for products from the search box
+Preconditions:
+- User should be on Homepage of NovoDaily's website.
+- Search box should be displayed
+Test Steps:
+1. navigate to the NovoDaily website.
+2. wait for the homepage to load for 5 seconds.
+3. click on the on the search box and write "Lipid" on the search box
+4. Verify that the search results page is displayed.
+5. verify that the opened product name contains the keyword "Lipids"
+6. click on the logo of "Novogenia" logo to refresh the homepage.
+7. repeat steps 3 to 6 for each of the following product names:
+    . "B12"
+    . "Dailes"
+    . "D3"
+    . "Magnesium"
+    . "Nutrition"
+    . "Shape"
+8.  click on the on the search box and write "Bundle" on the search box
+9.  Verify that the search results page is displayed
+10. Verify that the opened product name contains these keywords "Bundle - BD", "Bundle - D", "Bundle - B" on the results page
+11. repeat steps 8 and 9 for each of the following product name Subscription
+12  Verify that the opened product name contains these keywords "Subscription - BS", "Subscription - DBS", "Subscription - DS" on the results page
+13  close the browser
+
+
+

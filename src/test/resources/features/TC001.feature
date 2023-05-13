@@ -1,4 +1,4 @@
-#@wip
+@wip
 Feature: NovoDaily Logo Functionality
 
   Background: it is the same first test-step for all scenarios.

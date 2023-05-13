@@ -1,4 +1,4 @@
-#@wip
+@wip
   Feature: Functionality of "Deine Ziele" menu on the homepage
     Background: it is the same first test-step for all scenarios.
       Given The user navigate to novoDaily website

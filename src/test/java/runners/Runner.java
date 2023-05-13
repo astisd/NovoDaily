@@ -2,19 +2,22 @@ package runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin={"html:Reports/cucumber_reports/cucumber-reportsTC05.html",
-                "json:Reports/json_reports/cucumberTC05.json",
+        plugin={"html:target/cucumber-reports-try.html",
+                "json:target/json-reports/cucumberTry.json",
                 // json format api lar icin gecerli.
-                "junit:Reports/xml_reports//cucumberTC05.xml"},
+                "junit:target/xml-report/cucumberTry.xml"},
         features = "src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@wip",
+        tags = "@try",
         dryRun = false
 )
 public class Runner {
+
+
 
 }

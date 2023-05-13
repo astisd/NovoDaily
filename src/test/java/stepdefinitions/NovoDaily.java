@@ -7,6 +7,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.NovoDaily_ProductPage;
@@ -213,8 +214,19 @@ public class NovoDaily {
     }
 
     @And("verify that the {string} font is displayed")
-    public void verifyThatTheFontIsDisplayed(String arg0) {
-        Assert.assertTrue(homePage.OutdoorYogaText.isDisplayed());
+    public void verifyThatTheFontIsDisplayed(String text) {
+        WebElement target = switch (text){
+            case "Alle Produkte" -> homePage.alleProdukteText;
+            case "Deine Ziele" -> homePage.deineZieleText;
+            case "Wissenswert" -> homePage.wissenswertText;
+            case "Dein Novodaily Ratgeber" -> homePage.ratgeberText;
+            default -> null;
+        };
+        if (!(target == null)){
+            Assert.assertTrue(target.getText().contains(text));
+        }else {
+            Assert.assertTrue(homePage.OutdoorYogaText.isDisplayed());
+        }
     }
     @And("verify that the {string}, {string}, logo of product are displayed")
     public void verifyThatTheLogoOfProductAreDisplayed(String price, String number) {
@@ -247,4 +259,64 @@ public class NovoDaily {
         homePage.searchBox.sendKeys(ProductName);
 
     }
+
+    @When("hovers over a {string} categoriy title")
+    public void hoversOverACategoriyTitle(String titleName) {
+        Actions actions = new Actions(Driver.getDriver());
+        homePage = new NovodailyHomePage();
+        WebElement target = switch (titleName) {
+            case "Produkte" -> homePage.ProductDropdowns;
+            case "Deine Ziele" -> homePage.DeineZieleDropdown;
+            case "Wissenswertes" -> homePage.WissenswertesDropdown;
+            case "Ratgeber" -> homePage.RatgeberDropdown;
+            default -> null;
+        };
+
+
+        actions.moveToElement(target).perform();
+
+
+
+    }
+
+    @And("wait for {int} seconds")
+    public void waitForSeconds(int arg0) {
+            ReusableMethods.waitFor(2);
+    }
+
+    @Then("verify that the navigation flyout is displayed")
+    public void verifyThatTheNavigationFlyoutIsDisplayed() {
+        Assert.assertTrue(homePage.navigationPopupMenu.isDisplayed());
+    }
+
+    @When("click on {string} category title")
+    public void clickOnCategoryTitle(String CategoryTitle) {
+        homePage = new NovodailyHomePage();
+        WebElement target = switch (CategoryTitle) {
+            case "Produkte" -> homePage.ProductDropdowns;
+            case "Deine Ziele" -> homePage.DeineZieleDropdown;
+            case "Wissenswertes" -> homePage.WissenswertesDropdown;
+            case "Ratgeber" -> homePage.RatgeberDropdown;
+            default -> null;
+        };
+        if (!(target ==null)){
+            target.click();
+        }else {
+            System.out.println("Web element  is null");
+        }
+
+    }
+
+    @And("wait for the page to load for {int} seconds")
+    public void waitForThePageToLoadForSeconds(int second) {
+        ReusableMethods.waitFor(second);
+    }
+
+    @Then("return to the homepage")
+    public void returnToTheHomepage() {
+        homePage.logoOfNovodaily.click();
+    }
+
+
+
 }

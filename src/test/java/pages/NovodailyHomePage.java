@@ -27,6 +27,12 @@ public class NovodailyHomePage {
     @FindBy(xpath = "(//span[text()='Deine Ziele'])[1]")
     public WebElement DeineZieleDropdown;
 
+    @FindBy(xpath = "(//span[text()='Wissenswertes'])[1]")
+    public WebElement WissenswertesDropdown;
+
+    @FindBy(xpath = "(//span[text()='Ratgeber'])[1]")
+    public WebElement RatgeberDropdown;
+
 
     @FindBy(xpath = "//div[@class='col-3 navigation-flyout-col']/a")
     public List<WebElement> ProduktSubOptions;
@@ -51,4 +57,20 @@ public class NovodailyHomePage {
 
     @FindBy(xpath = "(//*[@name='search'])[2]")
     public WebElement  searchBox;
+
+    @FindBy(css = "[class='navigation-flyout is-open']")
+    public WebElement navigationPopupMenu;
+
+    @FindBy(xpath = "//*[text()='Alle Produkte']")
+    public WebElement alleProdukteText;
+
+    @FindBy(xpath = "(//*[text()='Deine Ziele '])[2]")
+    public WebElement deineZieleText;
+
+    @FindBy(xpath = "(//*[text()='Wissenswert: Alles rund um Gesundheit'])[2]")
+    public WebElement wissenswertText;
+
+    @FindBy(xpath = "(//*[text()='Dein Novodaily Ratgeber'])[2]")
+    public WebElement ratgeberText;
+
 }

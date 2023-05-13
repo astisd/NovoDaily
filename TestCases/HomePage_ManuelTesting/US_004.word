@@ -1,0 +1,47 @@
+Test Case ID: TC001
+Test Case Name : Visibility of each subtitel of "Product" category
+Test Description: verify that the subtitles
+            "Zur kategorie Produkte, Gen Analysen, Blut Analysen, Nahrungsergänzungsmittel, Bundels, Abos" subtitel are visible
+Preconditions:
+- User should be on Homepage of NovoDaily's website.
+- Top menu should be displayed
+Test Steps:
+1. navigate to the NovoDaily website.
+2. wait for the homepage to load for 5 seconds.
+3. Hover over the 'Product' category name in the top menu to display the subcategories
+4. Hover over each subcategory to ensure that its name is displayed
+5. verify that each subtitel's name is displayed when hovering over it.
+6. close the browser
+
+Test Case ID: TC002
+Test Case Name : Functionality of each subtitel of "Product" category
+Test Description: verify that the subtitles
+            "Zur kategorie Produkte, Gen Analysen, Blut Analysen, Nahrungsergänzungsmittel, Bundels, Abos" subtitel are active
+Preconditions:
+- User should be on Homepage of NovoDaily's website.
+- Top menu should be displayed
+Test Steps:
+1. navigate to the NovoDaily website.
+2. wait for the homepage to load for 5 seconds.
+3. hovers over on the "Product" category name
+4. hovers over on the each subtitel
+5. "while hovering over each subtitle, right-click and select 'Open link in new tab.'"
+6. Verify that each opened tab displays the following keywords:
+       "Alle Produkte" on the "Zur Kategorie Produkte"tab,
+       "Genanalysen" on the "Gen Analysen"tab,
+       "Blutanalysen" on the "Blut Analysen"tab,
+       "Nahrungsergänzungsmittel" on the "Nahrungsergänzungsmittel"tab,
+       "Bundles" on the "Bundles"tab,
+       and "Abos" on the "Abos"tab.
+7. close the browser
+
+    Expected Results:
+        Step 1: The NovoDaily website should be displayed.
+        Step 2: The homepage should be fully loaded.
+        Step 3: The submenus for the "Product" category should be displayed.
+        Step 4: Each subtitle should be highlighted as the user hovers over it.
+        Step 5: A new tab should open for each subtitle when the user right-clicks and selects "Open link in new tab."
+        Step 6: Each tab should display the correct keyword in a prominent location on the page.
+        Step 7: The browser should close.
+
+
