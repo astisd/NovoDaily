@@ -25,6 +25,7 @@ public class NovoDaily {
     NovoDaily_ProductPage productPage = new NovoDaily_ProductPage();
 
     String homepageHandle = null;
+    private Object navigateLinkElement;
 
     @When("The User click on the NovoDaily font logo")
     public void the_user_click_on_the_novo_daily_font_logo() {
@@ -202,7 +203,8 @@ public class NovoDaily {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
-        js.executeScript("arguments[0].scrollIntoView();", homePage.abnahmenLinkText);
+
+        js.executeScript("arguments[0].scrollIntoView();", homePage.abnehmenText);
 
     }
 

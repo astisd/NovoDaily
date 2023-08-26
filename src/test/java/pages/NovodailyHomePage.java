@@ -19,10 +19,10 @@ public class NovodailyHomePage {
 
 
     public NovodailyHomePage() {
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (xpath = ("(//a[normalize-space()='Alle Cookies erlauben'])[1]"))
+    @FindBy(xpath = ("(//a[normalize-space()='Alle Cookies erlauben'])[1]"))
     public WebElement cookieAcceptButton;
 
     @FindBy(css = "#uc-btn-accept-banner")
@@ -51,7 +51,7 @@ public class NovodailyHomePage {
     public List<WebElement> ProduktSubOptions;
 
     @FindBy(xpath = "//div[@class='col-4 navigation-flyout-col']/a")
-    public List<WebElement>DeineZieleOptions;
+    public List<WebElement> DeineZieleOptions;
 
     @FindBy(xpath = ("(//span[normalize-space()='Bundles'])[1]"))
     public WebElement bundlesText;
@@ -59,7 +59,7 @@ public class NovodailyHomePage {
     @FindBy(xpath = ("(//span[normalize-space()='Abnehmen'])[1]"))
     public WebElement abnehmenText;
 
-    @FindBy(xpath = "(//a[contains(text(),'Abnehmen')])[1]")
+    @FindBy(xpath = ("(//span[normalize-space()='Abnahmen'])[1]"))
     public WebElement abnahmenLinkText;
 
     @FindBy(xpath = "(//a[contains(text(),'Outdoor-Yoga')])[2]")
@@ -69,7 +69,7 @@ public class NovodailyHomePage {
     public List<WebElement> subtitelLink;
 
     @FindBy(xpath = "(//*[@name='search'])[2]")
-    public WebElement  searchBox;
+    public WebElement searchBox;
 
     @FindBy(css = "[class='navigation-flyout is-open']")
     public WebElement navigationFlyout;
@@ -85,28 +85,5 @@ public class NovodailyHomePage {
 
     @FindBy(xpath = "(//*[text()='Dein Novodaily Ratgeber'])[2]")
     public WebElement ratgeberText;
-
-// Bu kod parçası, acceptCookie() adında bir metod tanımlar.
-// Bu metod, accepToCookies adında bir elemente tıklamaya çalışır.
-// Eğer bu element bulunamazsa, "Cookie görüntülenmiyor" şeklinde bir mesajı ekrana yazdırır.
-    public void acceptCookie() {
-        try {
-            accepToCookies.click();
-        } catch (NoSuchElementException e) {
-            System.out.println("Cookie is not displayed");
-        }
-    }
-// Bu kod parçası, getCategoryTitleElement adında bir metod tanımlar.
-// Bu metod, categoryName olarak aldığı bir giriş değeriyle bir XPath ifadesi oluşturur.
-// Bu XPath ifadesi, categoryName değerini içeren bir span elementini bulmak için kullanılır.
-// Ardından, Driver.getDriver().findElement metodunu kullanarak bu web elementini bulur ve onu döndürür.
-    public WebElement getCategoryTitleElement(String categoryName) {
-        String xpath = "//span[text()='" + categoryName + "']";
-        return Driver.getDriver().findElement(xpath(xpath));
-    }
-
-    public WebElement getNavigationFlyoutElement(String categoryName) {
-        String xpath = "//span[text()='" + categoryName + "']/ancestor::div[@class='main-navigation-link']/div[@class='navigation-flyout is-open']";
-        return Driver.getDriver().findElement(xpath(xpath));
-    }
 }
+
