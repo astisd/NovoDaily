@@ -1,11 +1,14 @@
 package utilities;
 
+import io.unlogged.Unlogged;
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pages.NovodailyHomePage;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +19,7 @@ import java.util.Date;
 import java.util.List;
 
 public class ReusableMethods {
+
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
@@ -83,6 +87,20 @@ public class ReusableMethods {
 
         }
     }
+    public static void waitForPageToLoadd(long timeOutInSeconds) {
+        ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver driver) {
+                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+            }
+        };
+        try {
+            System.out.println("Waiting for Page Load Request to complete after " + timeOutInSeconds + " seconds");
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeOutInSeconds));
+            wait.until(expectation);
+        } catch (Throwable error) {
+            System.out.println(timeOutInSeconds + "timeout waiting for Page Load Request to complete.");
+        }
+    }
     //===============Explicit Wait==============//
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeToWaitInSec));
@@ -119,4 +137,61 @@ public class ReusableMethods {
                     "Timeout waiting for Page Load Request to complete after " + timeOutInSeconds + " seconds");
         }
     }
+    public static boolean isNavigationFlyoutDisplayed(WebElement navigationFlyout) {
+        try {
+            return navigationFlyout.isDisplayed();
+        } catch (NoSuchElementException | StaleElementReferenceException e) {
+            return false;
+        }
+    }
+    public static WebElement getCategoryTitleElement(String categoryName) {
+        NovodailyHomePage homePage = new NovodailyHomePage();
+        switch (categoryName) {
+            case "Produkte":
+                return homePage.ProductDropdowns;
+            case "Deine Ziele":
+                return homePage.DeineZieleDropdown;
+            case "Wissenswertes":
+                return homePage.WissenswertesDropdown;
+            case "Ratgeber":
+                return homePage.RatgeberDropdown;
+            default:
+                throw new IllegalArgumentException("Invalid category name: " + categoryName);
+        }
+    }
+
+    public static WebElement getNavigationFlyoutElement(String categoryName) {
+        String cssSelector = ".navigation-flyout.is-open";
+        switch (categoryName) {
+            case "Produkte":
+            case "Deine Ziele":
+            case "Wissenswertes":
+            case "Ratgeber":
+                return new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(5))
+                        .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(cssSelector)));
+            default:
+                throw new IllegalArgumentException("Invalid category name: " + categoryName);
+        }
+    }
+
+
+        public static boolean isNavigationFlyoutDisplayedInNovoDaily(WebElement navigationFlyout) {
+            try {
+                return navigationFlyout.isDisplayed();
+            } catch (Exception e) {
+                return false;
+            }
+        }
+    public static void clickElementWithJS(WebElement element) {
+        JavascriptExecutor executor = (JavascriptExecutor) Driver.getDriver();
+        executor.executeScript("arguments[0].click();", element);
+    }
+
+
+    public static void closeBrowser() {
+        Driver.getDriver().close();
+
+    }
 }
+
+

@@ -10,11 +10,11 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.time.Duration;
 
 public class Driver {
-    private Driver(){
+    public Driver(){
 
     }
 
-    static WebDriver driver;
+    public static WebDriver driver;
     public static WebDriver getDriver(){
         String browser = ConfigReader.getProperty("browser");
         if (driver==null){
@@ -61,5 +61,10 @@ public class Driver {
             driver.quit();
             driver=null;
         }
+    }
+
+    public static void initializeDriver() {
+        driver = getDriver();// bu method driver i initialize ediyor.
+
     }
 }

@@ -7,9 +7,10 @@ import utilities.Driver;
 
 public class NovoDaily_ProductPage {
     public NovoDaily_ProductPage() {
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
+
     @FindBy(xpath = "//p[@class='delivery-information delivery-available']")
     public WebElement ProduktAavailableDeliveryTime;
 

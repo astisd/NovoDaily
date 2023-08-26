@@ -1,19 +1,32 @@
 package pages;
 
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.w3c.dom.html.HTMLInputElement;
 import utilities.Driver;
 
 import java.util.List;
 
+import static org.openqa.selenium.By.xpath;
+
 public class NovodailyHomePage {
+
+    public HTMLInputElement cookie;
+    public WebElement navigationPopupMenu;
+
+
     public NovodailyHomePage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    @FindBy (xpath = ("(//a[normalize-space()='Alle Cookies erlauben'])[1]"))
+    public WebElement cookieAcceptButton;
+
     @FindBy(css = "#uc-btn-accept-banner")
-    public WebElement cookie;
+    public WebElement accepToCookies;
 
     @FindBy(css = "#uc-btn-deny-banner")
     public WebElement cookieDeny;
@@ -21,7 +34,7 @@ public class NovodailyHomePage {
     @FindBy(css = "[class='header-logo-picture']")
     public WebElement logoOfNovodaily;
 
-    @FindBy(xpath = "(//span[text()='Produkte'])[1]")
+    @FindBy(xpath = ("(//div[@class='main-navigation-link-text'])[1]"))
     public WebElement ProductDropdowns;
 
     @FindBy(xpath = "(//span[text()='Deine Ziele'])[1]")
@@ -40,10 +53,10 @@ public class NovodailyHomePage {
     @FindBy(xpath = "//div[@class='col-4 navigation-flyout-col']/a")
     public List<WebElement>DeineZieleOptions;
 
-    @FindBy(xpath = "//h2[text()='Bundles']")
+    @FindBy(xpath = ("(//span[normalize-space()='Bundles'])[1]"))
     public WebElement bundlesText;
 
-    @FindBy(xpath = "(//*[text()='Abnehmen'])[4]")
+    @FindBy(xpath = ("(//span[normalize-space()='Abnehmen'])[1]"))
     public WebElement abnehmenText;
 
     @FindBy(xpath = "(//a[contains(text(),'Abnehmen')])[1]")
@@ -59,7 +72,7 @@ public class NovodailyHomePage {
     public WebElement  searchBox;
 
     @FindBy(css = "[class='navigation-flyout is-open']")
-    public WebElement navigationPopupMenu;
+    public WebElement navigationFlyout;
 
     @FindBy(xpath = "//*[text()='Alle Produkte']")
     public WebElement alleProdukteText;
@@ -73,4 +86,27 @@ public class NovodailyHomePage {
     @FindBy(xpath = "(//*[text()='Dein Novodaily Ratgeber'])[2]")
     public WebElement ratgeberText;
 
+// Bu kod parçası, acceptCookie() adında bir metod tanımlar.
+// Bu metod, accepToCookies adında bir elemente tıklamaya çalışır.
+// Eğer bu element bulunamazsa, "Cookie görüntülenmiyor" şeklinde bir mesajı ekrana yazdırır.
+    public void acceptCookie() {
+        try {
+            accepToCookies.click();
+        } catch (NoSuchElementException e) {
+            System.out.println("Cookie is not displayed");
+        }
+    }
+// Bu kod parçası, getCategoryTitleElement adında bir metod tanımlar.
+// Bu metod, categoryName olarak aldığı bir giriş değeriyle bir XPath ifadesi oluşturur.
+// Bu XPath ifadesi, categoryName değerini içeren bir span elementini bulmak için kullanılır.
+// Ardından, Driver.getDriver().findElement metodunu kullanarak bu web elementini bulur ve onu döndürür.
+    public WebElement getCategoryTitleElement(String categoryName) {
+        String xpath = "//span[text()='" + categoryName + "']";
+        return Driver.getDriver().findElement(xpath(xpath));
+    }
+
+    public WebElement getNavigationFlyoutElement(String categoryName) {
+        String xpath = "//span[text()='" + categoryName + "']/ancestor::div[@class='main-navigation-link']/div[@class='navigation-flyout is-open']";
+        return Driver.getDriver().findElement(xpath(xpath));
+    }
 }
